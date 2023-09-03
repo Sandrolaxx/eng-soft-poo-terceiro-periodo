@@ -1,0 +1,24 @@
+public class Ex_01 {
+    public static void main(String[] args) {
+        double[][] notas = {
+            {8.0, 9.0, 8.6, 9.2, 7.0},
+            {7.1, 6.0, 7.2, 5.2, 7.4}
+        };
+
+        double mediaBigData = calcularMedia(notas[0]);
+        double mediaLogica = calcularMedia(notas[1]);
+
+        System.out.println("A média da turma em Big Data é: " + mediaBigData);
+        System.out.println("A média da turma em Lógica de Programação é: " + mediaLogica);
+    }
+
+    public static double calcularMedia(double[] notas) {
+        double soma = 0.0;
+
+        for (int i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+
+        return soma / notas.length;
+    }
+}
