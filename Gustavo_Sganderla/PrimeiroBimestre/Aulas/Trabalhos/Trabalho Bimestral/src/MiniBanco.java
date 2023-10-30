@@ -20,7 +20,7 @@ public class MiniBanco {
 
             switch (opcao) {
                 case 1:
-                    if (conta == null) {
+                     if (conta == null) {
                         System.out.print("Informe o documento: ");
                         String documento = scanner.nextLine();
                         System.out.print("Informe o nome: ");
