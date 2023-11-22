@@ -1,8 +1,28 @@
 # ☕ Desenvolvimento Orientado a Objetos
 
+### Destaques do Repo⚡
+
+Abaixo os 6 alunos que fizeram todos os trabalhos e entregaram o primeiro trabalho bimestral com extrema qualidade.
+
+Gabriel Wrubel - O primeiro a entregar e um dos melhores códigos✨
+![GabrielWrubel](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/c58a379d-429d-4241-9f2a-769992f7fa54)
+João Pedro Lima Rodrigues - Não existe dificuldade quando se tem força de vontade💪
+![JoaoPedro](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/007bf56c-c626-4030-b6d5-313e90708d15)
+Marco Aurélio Kovaleski Da Silva - Código ficou chique, colocou até um confirmar senha😎
+![MarcoAurelio](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/7820f1eb-8e41-4146-9307-c7c5aa3a2e82)
+Pedro Antônio Bernis - Código limpo e claro💯
+![PedroAntonio](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/9a5e11fc-255a-4ec9-9141-353d9c6479e3)
+Johnny Gili - O simples bem feito
+![Jonny](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/287049b5-229f-43b4-a412-077e77f1bc19)
+Gabriel Ferreira Dos Santos - Faltou o menu após logado mas o trabalho ficou muito bom
+![GabrielFerreira](https://github.com/Sandrolaxx/eng-soft-poo-terceiro-periodo/assets/61207420/949fd4c7-6829-4b6f-b870-a5217562012e)
+
 ### Comandos GIT
 
 IMPORTANTE ESTAR com o GITBASH NA PASTA DO REPO(eng-soft-poo-terceiro-periodo)
+
+Clonar o repo localmente
+> git clone + link do repo
 
 Adicionar alterações
 > git add .
@@ -35,7 +55,9 @@ BUSCAR POR Gerenciador de Credenciais no windows e remover o acesso dado ao GIT
 
 ---
 
-[Notion](https://maze-leaf-ed4.notion.site/Primeiro-Bimestre-POO-e42695e61eae4f4eaa1dac08f595d136?pvs=4)
+[Notion Primeiro Bimestre](https://maze-leaf-ed4.notion.site/Primeiro-Bimestre-POO-e42695e61eae4f4eaa1dac08f595d136?pvs=4)
+
+[Notion Segundo Bimestre](https://www.notion.so/Segundo-Bimestre-POO-na-pr-tica-ef00f12ee66440b5a8cce44162a208d7)
 
 ### Conteúdo programático - 1º Bimestre
 
