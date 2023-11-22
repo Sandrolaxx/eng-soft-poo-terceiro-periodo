@@ -1,17 +1,37 @@
-package org.acme;
+package com.fag.model;
 
-import jakarta.json.bind.annotation.JsonbProperty;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
 
-public class Token {
-    @JsonbProperty("access_token")
+@Entity
+@Table(name = "FAG_TOKEN")
+public class Token extends PanacheEntityBase {
+    
+    @Id
+    @SequenceGenerator(name = "ID_TOKEN", sequenceName = "GEN_ID_TOKEN", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_TOKEN")
+    @Column(name = "ID")
+    private Integer id;
+    
+    @Column(name = "TOKEN", length = 700)
+    private String token;
 
-    private String accessToken;
-
-    public String getAccessToken() {
-        return accessToken;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
+    public String getToken() {
+        return token;
     }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
 }
