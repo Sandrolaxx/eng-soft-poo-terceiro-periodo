@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Conta {
 
     private String nome;
@@ -10,19 +13,20 @@ public class Conta {
 
     private String senha;
 
+    private static List<Double> movimentacao;
+
     private double saldo;
-
     
 
     
 
-    public Conta(String nome, String documento, String telefone, String email, String senha, double saldo) {
+    public Conta(String nome, String documento, String telefone, String email, String senha) {
         this.nome = nome;
         this.documento = documento;
         this.telefone = telefone;
         this.email = email;
         this.senha = senha;
-        this.saldo = saldo;
+        
         
     }
 
@@ -58,21 +62,15 @@ public class Conta {
         this.senha = senha;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public  List<Double> getMovimentacao() {
+        return movimentacao;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public  void addMovimentacao(double valor) {
+        movimentacao.add(valor);
     }
 
 
-   public void depositar(double deposito){
-        saldo += deposito;
-    }
-    
 
-      public void debitar(double deposito){
-        saldo -= deposito;
-    }
+
 }

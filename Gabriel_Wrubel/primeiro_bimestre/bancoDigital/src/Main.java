@@ -8,10 +8,12 @@ public class Main {
         
 
         while (executando) {
-            System.out.println("Olá, bem-vindo ao banco digital, digite a operação que deseja fazer:\n" +
-                    "1- Abertura de conta\n" +
-                    "2- Fazer login\n" +
-                    "3- Sair");
+            System.out.println("Olá, bem-vindo ao banco digital\n"+
+                    "--------------------------------\n"+
+                    "Digite a operação que deseja fazer:\n" +
+                    "(1)- Abertura de conta\n" +
+                    "(2)- Fazer login\n" +
+                    "(3)- Sair");
 
             int op = scanner.nextInt();
             scanner.nextLine();
