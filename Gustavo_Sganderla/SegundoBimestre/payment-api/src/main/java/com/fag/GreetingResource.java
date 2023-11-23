@@ -38,12 +38,13 @@ public class GreetingResource {
     public String consult(ConsultBankslip payload) {
         TokenDTO token = getToken();
 
-        return rest.consult("Bearer " + token.getAccesToken(), payload);// Fazer a consulta
+        return rest.consult("Bearer " + token.getAccesToken(), payload);
     }
 
     @POST
     @Path("/make")
     public String hanlePayment() {
-        return "";// Fazer o pagamento
+        return "";
     }
 }
+//Entrarão na minha casa e destelharão meu telhado, tmj Sandrolax
