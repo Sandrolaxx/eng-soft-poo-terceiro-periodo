@@ -23,7 +23,7 @@ import jakarta.ws.rs.core.Form;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/payment-api/v1")
+@Path("/api/v1")
 public class PaymentController {
 
     @Inject
