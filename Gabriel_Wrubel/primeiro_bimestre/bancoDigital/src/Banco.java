@@ -184,6 +184,8 @@ public class Banco {
     }
 
 
+    
+
  /*   public static double saldo(Conta contaAtual){
         Optional<Double> vaList = contaAtual.getMovimentacao().stream().reduce((n1, n2) -> n1 + n2);
     }*/ 
