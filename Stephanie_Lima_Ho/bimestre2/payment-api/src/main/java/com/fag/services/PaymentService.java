@@ -1,4 +1,4 @@
-package com.fag.service;
+package com.fag.services;
 
 public class PaymentService {
     
