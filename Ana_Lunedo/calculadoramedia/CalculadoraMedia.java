@@ -1,14 +1,10 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+package Ana_Lunedo.calculadoramedia;
 
-// The main method must be in a class named "Main".
-class Main {
-public class MediaNotas {
+public class CalculadoraMedia {
     public static void main(String[] args) {
         float[][] notas = {
-            {8.0f, 9.0f, 8.6f, 9.2f, 7.0f},  // Notas de BigData
-            {7.1f, 6.0f, 7.2f, 5.2f, 7.4f}   // Notas de Lógica de Programação
+                { 8.0f, 9.0f, 8.6f, 9.2f, 7.0f }, // Notas de BigData
+                { 7.1f, 6.0f, 7.2f, 5.2f, 7.4f } // Notas de Lógica de Programação
         };
 
         float mediaBigData = calcularMedia(notas[0]);
@@ -25,4 +21,5 @@ public class MediaNotas {
         }
         return soma / notas.length;
     }
+    
 }
