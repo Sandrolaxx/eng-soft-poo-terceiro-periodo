@@ -1,7 +1,7 @@
 package com.fag.dto;
 
 public class PaymentAuthDTO {
-    
+
     private String bloco1;
 
     private String bloco2;

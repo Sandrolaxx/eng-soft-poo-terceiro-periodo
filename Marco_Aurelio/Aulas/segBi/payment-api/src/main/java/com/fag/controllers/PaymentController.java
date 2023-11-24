@@ -1,18 +1,23 @@
 package com.fag.controllers;
 
+import java.util.UUID;
+
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+import com.fag.dto.ConsultResponseDTO;
 import com.fag.dto.ConsultaBoletoDTO;
+import com.fag.dto.PaymentResponseDTO;
 import com.fag.dto.TokenDTO;
+import com.fag.model.Payment;
+import com.fag.model.Token;
 import com.fag.services.RestClientCelcoin;
 
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Form;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -27,8 +32,15 @@ public class PaymentController {
     @GET
     @Path("/token")
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional
 
     public Response hello() {
+        TokenDTO dto = getToken();
+        Token entity = new Token();
+
+        entity.setToken(dto.getAccessToken());
+        entity.persist();
+
         return Response.ok(getToken()).build();
     }
 
@@ -49,7 +61,7 @@ public class PaymentController {
     @Produces(MediaType.APPLICATION_JSON)
 
     public Response consult(ConsultaBoletoDTO dto) {
-        String response = restClient.consult("Bearer " + getToken().getAccessToken(), dto);
+        ConsultResponseDTO response = restClient.consult("Bearer " + getToken().getAccessToken(), dto);
 
         return Response.ok(response).build();
     }
@@ -57,9 +69,18 @@ public class PaymentController {
     @POST
     @Path("/payment")
     @Produces(MediaType.APPLICATION_JSON)
-
+    @Transactional
     public Response payment(ConsultaBoletoDTO dto) {
-        String response = restClient.payment("Bearer " + getToken().getAccessToken(), dto);
+
+        PaymentResponseDTO response = restClient.payment("Bearer " + getToken().getAccessToken(), dto);
+        Payment entity = new Payment();
+
+        entity.setId(UUID.randomUUID());
+        entity.setAmount(dto.getBill().getValue());
+        entity.setDigitable(dto.getData().getDigitable());
+        entity.setReceipt(response.getReceipt().getReceiptformatted());
+
+        entity.persist();
 
         return Response.ok(response).build();
     }

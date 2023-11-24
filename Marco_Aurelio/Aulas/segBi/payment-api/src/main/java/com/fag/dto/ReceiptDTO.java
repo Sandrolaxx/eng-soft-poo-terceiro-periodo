@@ -1,7 +1,7 @@
 package com.fag.dto;
 
 public class ReceiptDTO {
-    
+
     private String receiptData;
 
     private String receiptformatted;
