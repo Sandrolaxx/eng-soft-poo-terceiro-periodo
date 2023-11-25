@@ -2,8 +2,10 @@ package com.fag.services;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import com.fag.dto.ConsultResponseDTO;
 import com.fag.dto.ConsultaBoletoDTO;
 import com.fag.dto.ConsultaBoletoDataDTO;
+import com.fag.dto.PaymentResponseDTO;
 import com.fag.dto.TokenDTO;
 
 
@@ -25,11 +27,11 @@ public interface RestClientCelcoin {
 
     @POST
     @Path("/v5/transactions/billpayments/authorize")
-    String consult(@HeaderParam("Authorization") String token, ConsultaBoletoDTO dto);
+    ConsultResponseDTO consult(@HeaderParam("Authorization") String token, ConsultaBoletoDTO dto);
 
 
     @POST
     @Path("/v5/transactions/billpayments")
-     String payment(@HeaderParam("Authorization") String token, ConsultaBoletoDTO dto);
+     PaymentResponseDTO payment(@HeaderParam("Authorization") String token, ConsultaBoletoDTO dto);
 
 }
