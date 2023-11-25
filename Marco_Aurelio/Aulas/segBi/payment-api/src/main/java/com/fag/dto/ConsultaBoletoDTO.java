@@ -3,12 +3,12 @@ package com.fag.dto;
 import jakarta.json.bind.annotation.JsonbProperty;
 
 public class ConsultaBoletoDTO {
-    
+
     @JsonbProperty("barCode")
-    private ConsultaBoletoDTO data;
+    private ConsultaBoletoDataDTO data;
 
     @JsonbProperty("billData")
-    private ConsultResponseDTO bill;
+    private ConsultaBoletoDataDTO bill;
 
     private Long transactionIdAuthorize;
 
@@ -16,43 +16,44 @@ public class ConsultaBoletoDTO {
 
     private String dueDate;
 
-    public ConsultaBoletoDTO getData() {
+    public ConsultaBoletoDataDTO getData() {
         return data;
     }
 
-    public ConsultResponseDTO getBill() {
+    public void setData(ConsultaBoletoDataDTO data) {
+        this.data = data;
+    }
+
+    public ConsultaBoletoDataDTO getBill() {
         return bill;
+    }
+
+    public void setBill(ConsultaBoletoDataDTO bill) {
+        this.bill = bill;
     }
 
     public Long getTransactionIdAuthorize() {
         return transactionIdAuthorize;
     }
 
-    public String getCpfCnpj() {
-        return cpfCnpj;
-    }
-
-    public String getDueDate() {
-        return dueDate;
-    }
-
-    public void setData(ConsultaBoletoDTO data) {
-        this.data = data;
-    }
-
-    public void setBill(ConsultResponseDTO bill) {
-        this.bill = bill;
-    }
-
     public void setTransactionIdAuthorize(Long transactionIdAuthorize) {
         this.transactionIdAuthorize = transactionIdAuthorize;
+    }
+
+    public String getCpfCnpj() {
+        return cpfCnpj;
     }
 
     public void setCpfCnpj(String cpfCnpj) {
         this.cpfCnpj = cpfCnpj;
     }
 
+    public String getDueDate() {
+        return dueDate;
+    }
+
     public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
+
 }
