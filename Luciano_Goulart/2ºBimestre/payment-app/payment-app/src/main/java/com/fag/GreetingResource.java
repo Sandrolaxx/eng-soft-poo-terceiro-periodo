@@ -44,7 +44,7 @@ public class GreetingResource {
     @Path("/consult")
     @Produces(MediaType.APPLICATION_JSON)
     public Response consult(ConsultarBoletoDTO dto) {
-        String response = restClient.consult("Bearer" + getToken().getAccessToken(), dto);
+        String response = restClient.consult("Bearer " + getToken().getAccessToken(), dto);
 
         return Response.ok(response).build();
     }
@@ -53,7 +53,7 @@ public class GreetingResource {
     @Path("/payment")
     @Produces(MediaType.APPLICATION_JSON)
     public Response payment(ConsultarBoletoDTO dto) {
-        String response = restClient.payment("Bearer" + getToken().getAccessToken(), dto);
+        String response = restClient.payment("Bearer " + getToken().getAccessToken(), dto);
 
         return Response.ok(response).build();
     }
